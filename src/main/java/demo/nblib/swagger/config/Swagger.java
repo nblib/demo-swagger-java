@@ -22,10 +22,13 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.List;
 
+/**
+ * swagger的配置
+ */
 @Configuration
 //@ConditionalOnProperty(prefix = "swagger",value = {"enable"},havingValue = "true") //只有配置文件中swagger.enable=true时才加载这个配置文件
-@Profile("dev") //只有开发模式才使用swagger
-@EnableSwagger2
+@Profile({"dev", "test"}) //只有开发和测试模式才使用swagger,spring:profiles:active: dev 时才会加载这个配置
+@EnableSwagger2 //开启swagger
 public class Swagger {
 
 
