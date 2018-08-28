@@ -3,13 +3,13 @@ server:
   port: 8080
 
 swagger:
-  basepackage: demo.nblib.swagger.controller
-  version: 1.0
-  serviceUrl: test.nblib.org
-  globalParms:
-    - name: _appid
-      desc: 来源的app类型
-      type: String
-      target: query
-      def: 2sc
-      required: true
+  basepackage: demo.nblib.swagger.controller #接口所在包,用于扫描,供swagger提供文档
+  version: 1.0  # 接口版本
+  serviceUrl: test.nblib.org  # 接口的地址
+  globalParms:    # 当需要用到全局参数时,也就是每个接口都必须的参数时,指定这个配置项
+    - name: _appid  # 参数的名称
+      desc: 来源的app类型  # 参数描述
+      type: String  #参数类型,比如String,int,boolean等等
+      target: query # 参数被放到哪个位置:比如请求时加入到header中,或者作为请求参数: 可选值: query,header
+      def: pc  # 默认值
+      required: true # 是否必须
