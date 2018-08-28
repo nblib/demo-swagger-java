@@ -1,0 +1,15 @@
+debug: true
+server:
+  port: 8080
+
+swagger:
+  basepackage: demo.nblib.swagger.controller
+  version: 1.0
+  serviceUrl: test.nblib.org
+  globalParms:
+    - name: _appid
+      desc: 来源的app类型
+      type: String
+      target: query
+      def: 2sc
+      required: true

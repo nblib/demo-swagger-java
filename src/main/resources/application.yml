@@ -1,0 +1,7 @@
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: demo-swagger-java
+    description: 测试联系使用swagger自动生成文档
